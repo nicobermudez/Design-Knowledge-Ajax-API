@@ -1,5 +1,4 @@
 const quoteTag = document.querySelector("h1")
-const authorTag = document.querySelector("p")
 const randomTag = document.querySelector("footer img")
 const bodyTag = document.querySelector("body")
 
@@ -14,21 +13,11 @@ const bodyTag = document.querySelector("body")
 // })
 
 const getQuote = function () {
-//   if(data.length > 0) {
-// 		//get random quote
-// 		const randomNumber = Math.floor(Math.random() * data.length)
-// 		const randomQuote = data[randomNumber]
-// 		quoteTag.innerHTML = randomQuote.quote
-// 		authorTag.innerHTML = randomQuote.author
-//   }
-  
-  fetch("https://api.superhi.com/api/test/quotes/random")
+  fetch("https://api.adviceslip.com/advice")
   	.then(response => response.json())
   	.then(jsonData => {
-    	quoteTag.innerHTML = "&ldquo;" + jsonData.quote + "&rdquo;"
-    	authorTag.innerHTML = "&mdash; " + jsonData.author
-    
-    if (jsonData.quote.length > 80) {
+    	quoteTag.innerHTML = "&ldquo;" + jsonData.slip.advice + "&rdquo;"
+    if (jsonData.slip.advice.length > 80) {
         quoteTag.classList.add("long")
         } else {
           quoteTag.classList.remove("long")
