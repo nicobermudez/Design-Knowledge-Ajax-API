@@ -1,5 +1,5 @@
-# Design-Knowledge-Ajax-API
+# Random Advice Generator
 
 [Final Copy](https://random-advice-generator.superhi.com/)
 
-Used an API for random quotes to generate a random quote and author every load and click of random button
+Used an API for random advice quotes from [Advice Slip](https://adviceslip.com/) to generate a random piece of advice for every load and click of random button
